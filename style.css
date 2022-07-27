@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{ /*essa área é usada para criar variáveis para que possamos simplificar e padronizar o trabalho que vai ser feito no projeto. Isso nos 
+    economiza o tempo que seria gasto escrevendo sempre os códigos hexadecimais das cores, por exemplo, além de facilitar possíveis mudanças de
+    manutenção no futuro*/
+    --branco-principal:#FFFFFF;
+    --cinza-secundario:#C0C0C0;
+    --botao-azul:#167BF7;
+    --cor-de-fundo:#00030C;
+    --fonte-principal:'Inter';
+    --botao-azul-efeito: #3c88e5;
+
+}
+
+body{
+    background: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.principal{/*o motivo para colocarmos essa imagem através do método de backroung-image é que a imagem abaixo se trata de uma imagem meramente 
+    ilustrativa, que não tem muita importância em casos em que a página não carregar. Já a imagem do combo que está no HTML, foi colocada lá pois
+    devemos colocar um "alt" para caso ela não seja carregada, pois ela carrega uma informação de pode ser importante ao leitor*/
+    background-image: url(img/Background.png);
+    background-repeat: no-repeat;/*como colocamos abaixo para que o background use toda a altura da tela, o navegador começa a repetir a imagem
+    para que isso aconteça. Como não queremos isso, desabilitamos a repetição da imagem*/
+    background-size:100%;
+    align-items: center;
+    text-align: center;
+}
+
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%; /*o display grid é usado para dividir a tela em em grades ou seções, que no nosso caso configuramos como grades
+    de colunos. Com isso, ao definir os valores em 50% e 50%, fizemos com que o display da página fosse divido em duas seções de colunos, que dividem
+    a página bem no meio. É possível fazer essa divisão com diversos outros valores, como 33% 33% 33%*/
+}
+
+.container__secao-1{
+    margin: 0 6em;
+}
+
+.container__img{
+    margin: 1em 0 3em 0;
+}
+.container__botao{
+    background: var(--botao-azul);
+    border-radius: 5px;
+    padding: 1em;
+    display: block;
+    text-decoration: none;
+    color: var(--branco-principal);
+    transition: 200ms;
+}
+
+.botao_secundario{
+    background-color: transparent;
+    border: 2px solid var(--branco-principal); 
+}
+
+.container__aviso{
+    font-size: 12px;
+    color: var(--cinza-secundario);
+}
+
+.container__titulo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.secundario__imagem{
+    width: 80%;
+}
+
+.secundario{
+    align-items: center;
+    margin: 0 10em;
+}
+
+.descricao__titulo{
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto{
+    color: var(--cinza-secundario);
+}
+
+.botao__secundario{
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.container__descricao{
+    margin: 2em
+}
+
+.titulo__dispositivos{
+    text-align: center;
+}
+
+.dispositivos__lista{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 5em 0;
+}
+
+.lista__item {
+    text-align: center;
+    font-size: 32px;
+    color:var(--branco-principal)
+}
+
+.footer{
+    text-align: center;
+}
+
+.logo__footer{
+    margin: 3em 0;
+}
+.lisa__link{
+    display: inline-block;
+}
+
+footer ul a{
+    text-decoration: none;
+    color: var(--cinza-secundario);
+    margin: 0 1em;
+    font-size: 16px;
+}
+
+.texto__footer{
+    margin: 2em 3em;
+    color: var(--cinza-secundario);
+    font-size: 14px;
+}
+
+footer ul a:hover{
+    color: var(--botao-azul)
+}
+
+.container__botao:hover{
+    background-color: var(--botao-azul-efeito);
+    color: var(--cor-de-fundo);
+    transition: 200ms;
+}
